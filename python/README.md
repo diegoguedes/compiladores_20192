@@ -138,9 +138,9 @@ Funções built-in estão automaticamente disponíveis e podem ser chamadas em t
 
     linguagem = {"aa","bb"} #base
     if (__name__ == "__main__"):
-    linguagem = passo_recursivo(linguagem)
-    linguagem = passo_recursivo(linguagem)
-    linguagem = passo_recursivo(linguagem)
+        linguagem = passo_recursivo(linguagem)
+        linguagem = passo_recursivo(linguagem)
+        linguagem = passo_recursivo(linguagem)
 
     print("A linguagem final ficou: {}".format(sorted(linguagem,key=len)))
     print("aa" in linguagem)
