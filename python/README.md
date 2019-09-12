@@ -120,23 +120,27 @@ Funções built-in estão automaticamente disponíveis e podem ser chamadas em t
 ## Passo recursivo de uma linguagem
 
     def passo_recursivo(linguagem):
-      nova_linguagem = linguagem.copy()
+        nova_linguagem = linguagem.copy()
+        i=1
 
-      print(nova_linguagem)
-      for val in linguagem:
-        nova_linguagem.add(val+"aa")
-        nova_linguagem.add(val+"ab")
-        nova_linguagem.add(val+"ba")
-        nova_linguagem.add(val+"bb")
-        print(nova_linguagem)
+        print("Como a linguagem era antes: {}".format(nova_linguagem))
+        for val in linguagem:
+            nova_linguagem.add(val+"aa")
+            nova_linguagem.add(val+"ab")
+            nova_linguagem.add(val+"ba")
+            nova_linguagem.add(val+"bb")
+            print("Passo {}: {}".format(i,nova_linguagem))
+            i += 1
 
-      return nova_linguagem.copy()
+        print("Como a linguagem ficou: {}".format(nova_linguagem))
+
+        return nova_linguagem.copy()
 
     linguagem = {"aa","bb"} #base
     if (__name__ == "__main__"):
-      linguagem = passo_recursivo(linguagem)
-      linguagem = passo_recursivo(linguagem)
-      linguagem = passo_recursivo(linguagem)
+    linguagem = passo_recursivo(linguagem)
+    linguagem = passo_recursivo(linguagem)
+    linguagem = passo_recursivo(linguagem)
 
     print("A linguagem final ficou: {}".format(sorted(linguagem,key=len)))
     print("aa" in linguagem)
