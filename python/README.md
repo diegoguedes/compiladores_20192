@@ -284,9 +284,10 @@ Mudar cada caractere de espaço para "-"
 
    
 
+# Referências
 
-Documentação
+**Documentação:**
 https://docs.python.org/3/library/string.html#formatexamples
 
-RegEx
+**RegEx:**
 https://www.w3schools.com/python/python_regex.asp
