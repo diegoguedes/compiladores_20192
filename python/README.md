@@ -206,6 +206,83 @@ Funções built-in estão automaticamente disponíveis e podem ser chamadas em t
 | \W |	Returns a match where the string DOES NOT contain any word characters |	"\W" |
 | \Z |	Returns a match if the specified characters are at the end of the string |	"Spain\Z" |
 
+### Conjuntos
+| Conjunto | Descrição |
+|--- |--- |
+| [arn]	| Returns a match where one of the specified characters (a, r, or n) are present |	
+| [a-n]	| Returns a match for any lower case character, alphabetically between a and n	|
+| [^arn] | 	Returns a match for any character EXCEPT a, r, and n	|
+| [0123] | 	Returns a match where any of the specified digits (0, 1, 2, or 3) are present	|
+| [0-9] | 	Returns a match for any digit between 0 and 9	|
+| [0-5][0-9] | 	Returns a match for any two-digit numbers from 00 and 59	|
+| [a-zA-Z] | 	Returns a match for any character alphabetically between a and z, lower case OR upper case	|
+| [+] | 	In sets, +, \*, ., \|, (), $,{} has no special meaning, so [+] means: return a match for any + character in the string|
+
+### Função findall()
+
+Imprimindo a lista de todos os *match*
+
+    import re
+
+    str = "disciplina do prof. diego"
+    x = re.findall("di", str)
+    print(x)
+
+### Função search ()
+
+Buscando espaço na string
+
+    import re
+
+    str = "A disciplina de Compiladores"
+    x = re.search("\s", str)
+    print("O primeiro espaço está localizado na posição:", x.start())
+
+### Função split ()
+
+Dividindo a frase em cada caractere de espaço em branco:
+
+    import re
+
+    str = "A disciplina de Compiladores"
+    x = re.split("\s", str)
+    print(x)
+
+### Função sub ()
+
+Mudar cada caractere de espaço para "-"
+
+    import re
+
+    str = "A disciplina de Compiladores"
+    x = re.sub("\s", "-", str)
+    print(x)
+
+### Funções para obter informações da pesquisa
+    import re
+    
+    str = "Disciplina do prof Diego"
+    x = re.search(r"\bD\w+", str)
+
+    print(x)
+    print(x.span())
+    print(x.string)
+    print(x.group())
+
+* .span() - Retorna uma tupla contendo a posição de início e fim do *match*.
+* .string - Retorna a string passada na função
+* .group() - Retorna a parte da string onde teve *match*
+
+### Obtendo número celular
+    import re
+
+    texto = "Meu numero é 98113-1598 e 95698-2213"
+    padrao = "[0-9]{5}[-][0-9]{4}"
+
+    retorno = re.findall(padrao,texto)
+    print(retorno)
+
+   
 
 
 Documentação
