@@ -152,7 +152,9 @@ Funções built-in estão automaticamente disponíveis e podem ser chamadas em t
 
 ### Pegando substring
     meuNome = "DIEGO"
-    substr = meuNome[3]
+    letra = meuNome[3]
+    substr = meuNome[2:5]
+    print(letra)
     print(substr)
 
 
