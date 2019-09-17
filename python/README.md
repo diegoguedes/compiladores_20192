@@ -157,6 +157,57 @@ Funções built-in estão automaticamente disponíveis e podem ser chamadas em t
     print(letra)
     print(substr)
 
+## Regular Expression (RegEx)
+
+### Módulo RegEx
+    import re
+    
+### Funções RegEx
+
+|Função| Descrição |
+|---|---|
+| findall  | Returns a list containing all matches  | 
+| search  |  Returns a **Match object** if there is a match anywhere in the string |  
+| split  | Returns a list where the string has been split at each match  |  
+| sub | Replaces one or many matches with a string|
+
+### RegEx in Python
+    import re
+
+    txt = "Disciplina de Compiladores"
+    x = re.search("^The.*Spain$", txt)
+    
+### Metacharacteres
+
+| Caracter | Descrição | Exemplo|
+|--- |--- |---|
+|[]| A set of characters | "[a-m]" |
+|\ | Signals a special sequence (can also be used to escape special characters)	| "\d" |
+| . | 	Any character (except newline character) | "he..o"	|
+| ^	| Starts with | "^hello"	|
+| $	| Ends with | "world$"	|
+| *	| Zero or more occurrences | "aix*"	|
+| +	| One or more occurrences | "aix+"	|
+| {} | Exactly the specified number of occurrences  |  "al{2}"	|
+| \|	| Either or	| "falls\|stays"	|
+| () | 	Capture and group	 |  |
+
+### Sequencias Especiais
+| Caracter | Descrição | Exemplo|
+|--- |--- |---|
+| \A |	Returns a match if the specified characters are at the beginning of the string | "\AThe"	|
+| \b |	Returns a match where the specified characters are at the beginning or at the end of a word	| r"\bain" r"ain\b"	|
+| \B |	Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word | r"\Bain" r"ain\B"	|
+| \d |	Returns a match where the string contains digits (numbers from 0-9)	| "\d"	|
+| \D |	Returns a match where the string DOES NOT contain digits |	"\D"	|
+| \s |	Returns a match where the string contains a white space character |	"\s"	|
+| \S |	Returns a match where the string DOES NOT contain a white space character |	"\S"	|
+| \w |	Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character) |	"\w"	|
+| \W |	Returns a match where the string DOES NOT contain any word characters |	"\W" |
+| \Z |	Returns a match if the specified characters are at the end of the string |	"Spain\Z" |
+
+
 
 Documentação
 https://docs.python.org/3/library/string.html#formatexamples
+https://www.w3schools.com/python/python_regex.asp
