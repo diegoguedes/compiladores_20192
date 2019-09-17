@@ -148,7 +148,12 @@ Funções built-in estão automaticamente disponíveis e podem ser chamadas em t
     print("" in linguagem)
 
 
+## Manipulando Strings
 
+### Pegando substring
+    meuNome = "DIEGO"
+    substr = meuNome[3]
+    print(substr)
 
 
 Documentação
