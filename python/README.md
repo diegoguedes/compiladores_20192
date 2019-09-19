@@ -238,6 +238,31 @@ Buscando espaço na string
     x = re.search("\s", str)
     print("O primeiro espaço está localizado na posição:", x.start())
 
+### Função match ()
+Buscando se a primeira palavra do texto começa com d
+
+    import re
+
+    str = "disciplina de compiladores"
+    resultado = re.match("\Ad\w+", str)
+    print(resultado)
+
+### search() vs. match() 
+re.match() checa somente o início da string, enquanto re.search() checa para o *match* em algum lugar da string.
+
+    import re
+
+    re.match("c", "abcdef")    # sem match
+    re.search("c", "abcdef")   # com match
+### Função fullmatch ()
+Se a palavra toda corresponde ao padrão
+
+    import re
+
+    texto = "abcabcabc"
+    padrao = "(abc)*a*"
+    resultado = re.fullmatch(padrao,texto)
+
 ### Função split ()
 
 Dividindo a frase em cada caractere de espaço em branco:
