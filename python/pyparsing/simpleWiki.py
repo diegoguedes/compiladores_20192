@@ -2,7 +2,6 @@
 #
 # Exemplo da biblioteca pyparsing para converter um texto wiki para HTML
 # Disponível em https://github.com/pyparsing/pyparsing/blob/master/examples/simpleWiki.py
-# Copyright (c) 2003,2016, Paul McGuire
 # Modificado pelo prof. Diego Guedes
 #
 from pyparsing import *
