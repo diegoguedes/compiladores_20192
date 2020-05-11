@@ -1,6 +1,5 @@
 Lista é uma estrutura de dados provida pela própria linguagem e que utilizamos muito na programação Python.
 Os seguintes métodos estão disponíveis em uma lista:
-
 - list.append(x): Adiciona um item ao fim da lista.
 - list.extend(iterable): Adiciona todos os itens do iterável iterable ao fim da lista.
 - list.insert(i, x): Insere um item em uma dada posição i.
